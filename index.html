@@ -4,45 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
     <script src="javascript.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
     <title>Wuxing Rock, Paper, Scissors</title>
     
-</head>
 <body>
-    <main-container>
-    <header-container>
-        <h1>Wuxing Rock, Paper, Scissors Game</h1>
 
-        <p>Rules: Select an ancient element. Next, your opponent (the computer) will also make a selection. When both selection choices are revealed, the stronger element choice will determine the victor. The overall match champion will emerge after five victories. Ties will be replayed until a victor is determined.</p>
 
-    </header-container>
+<header>
+<header-view>
+<header-left>
+    <h1>Wuxing "Rock, Paper, Scissors"</h1>
 
-    <element-container>
-        <h2>Choose an ancient element.</h2>
-        <inner-element-container>
-            <button id="wo-btn" value="wood">Wood</button>
-            <button id="fi-btn" value="fire">Fire</button>
-            <button id="ea-btn" value="earth">Earth</button>
-            <button id="me-btn" value="metal">Metal</button>
-            <button id="wa-btn" value="water">Water</button>
-        </inner-element-container>
-    </element-container>
+    <h3>Rules: </h3>
+    <ol>
+        <li>Choose an ancient element.</li> 
+        <br>
+        <li>Next, your opponent (the computer) will also make a selection.</li> 
+        <br>
+        <li>When both selections are revealed, the stronger element choice will determine the victor.</li> 
+        <br>
+        <li>The match champion will emerge after five victories. (Ties will be replayed until a victor is determined.)</li>
+    </ol>
 
-    <selection-container>
-        <h2>You have chosen: X</h2>
-        <h2>Your opponent has chosen: Y</h2>
-    </selection-container>
+</header-left>
+<img src="wuxingWheel.svg" alt="A wheel containing the five Taoist elements of wood, fire, earth, metal, and water.">
+</header-view>
+</header>
 
-    <game-count-container>
-        <h2 id="game-counter">Game Series Count: 0</h2>
-        <h2>Your victories: A</h2>
-        <h2>Your defeats: B</h2>
-        <h2>Ties: C</h2>
-        <h2>Your opponent's victories: D</h2>
-        <h2>Your opponent's defeats: E</h2>
-        <button id="reset">Reset</button>
-    </game-count-container>
+<!-- white band with four boxes-->
+<info-section>
+<h2>Choose an Ancient Element...</h2>
 
-    </main-container>
+<info-section-view>
+
+<img-text-box>
+<button id="wo-btn" value="wood"><img src="wuxingWood.svg" alt="The element of Wood."></button>
+<p class="alt-text">Wood</p>
+</img-text-box>
+
+<img-text-box>
+<button id="fi-btn" value="fire"><img src="wuxingFire.svg" alt="The element of Fire."></button>
+<p class="alt-text">Fire</p>
+</img-text-box>
+
+<img-text-box>
+<button id="ea-btn" value="earth"><img src="wuxingEarth.svg" alt="The element of Earth."></button>
+<p class="alt-text">Earth</p>
+</img-text-box>
+
+<img-text-box>
+<button id="me-btn" value="metal"><img src="wuxingMetal.svg" alt="The element of Metal."></button>
+<p class="alt-text">Metal</p>
+</img-text-box>
+
+<img-text-box>
+<button id="wa-btn" value="water"><img src="wuxingWater.svg" alt="The element of Water."></button>
+<p class="alt-text">Water</p>
+</img-text-box>
+
+</info-section-view>
+
+</info-section>
+
+<!-- grey band with a testimonial quote -->
+<quote-section>
+    <quote-view>
+        <blockquote>
+        I used to think astrology was stupid, or just for Millennials. Then I met a "stunted Sagittarius." Now I don't know what to think. I mean, it only costs a penny a day, and I inherited my grandmother's couch from the 1970s, there's like $36 plus in loose change in that smelly beast. I can help!!!
+        <h6>~ Ashley (One of many Ashley's you likely know.)</h6>
+        </blockquote>
+    </quote-view>
+</quote-section>
+
+<!-- white band with inner blue sign up box -->
+<sign-up-section>
+    <sign-up-view>
+        <call-to-action-box>
+            <call-to-action-text>
+                <h3>It's time to end the suffering! </h3> 
+                <p>Will you contribute just 1 cent a day to a zodiac sign in need? Make a difference!</p>
+            </call-to-action-text>
+            <button-box>
+            <button>Sign up!</button>
+            </button-box>
+        </call-to-action-box>
+    </sign-up-view>
+</sign-up-section>
+
+<!-- grey footer -->
+<footer>
+<p>Copyright © Mad Muffin Man Productions 2023</p>
+</footer>
+
 </body>
 </html>
