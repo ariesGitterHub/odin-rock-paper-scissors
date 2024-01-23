@@ -33,9 +33,9 @@
     --btn-border: 13px dashed;
     --content-width: 750px;
     --default-border-radius: 50px;
-    --default-text: 'Salsa', cursive;
-    --title-text: 'Luckiest Guy', cursive;
-    --chinese-chars: 'Noto Sans TC', sans-serif;
+    --default-text: "Salsa", cursive, Georgia;
+    --title-text: "Luckiest Guy", cursive, "Baskerville";
+    --chinese-chars: "Noto Sans TC", sans-serif;
 }
 
 * {
