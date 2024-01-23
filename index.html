@@ -7,98 +7,82 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
-    <script src="javascript.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
-    <title>Wuxing Rock, Paper, Scissors</title>
-    
-<body>
-
-
-<header>
-<header-view>
-<header-left>
-    <h1>Wuxing "Rock, Paper, Scissors"</h1>
-
-    <h3>Rules: </h3>
-    <ol>
-        <li>Choose an ancient element.</li> 
-        <br>
-        <li>Next, your opponent (the computer) will also make a selection.</li> 
-        <br>
-        <li>When both selections are revealed, the stronger element choice will determine the victor.</li> 
-        <br>
-        <li>The match champion will emerge after five victories. (Ties will be replayed until a victor is determined.)</li>
-    </ol>
-
-</header-left>
-<img src="wuxingWheel.svg" alt="A wheel containing the five Taoist elements of wood, fire, earth, metal, and water.">
-</header-view>
-</header>
-
-<!-- white band with four boxes-->
-<info-section>
-<h2>Choose an Ancient Element...</h2>
-
-<info-section-view>
-
-<img-text-box>
-<button id="wo-btn" value="wood"><img src="wuxingWood.svg" alt="The element of Wood."></button>
-<p class="alt-text">Wood</p>
-</img-text-box>
-
-<img-text-box>
-<button id="fi-btn" value="fire"><img src="wuxingFire.svg" alt="The element of Fire."></button>
-<p class="alt-text">Fire</p>
-</img-text-box>
-
-<img-text-box>
-<button id="ea-btn" value="earth"><img src="wuxingEarth.svg" alt="The element of Earth."></button>
-<p class="alt-text">Earth</p>
-</img-text-box>
-
-<img-text-box>
-<button id="me-btn" value="metal"><img src="wuxingMetal.svg" alt="The element of Metal."></button>
-<p class="alt-text">Metal</p>
-</img-text-box>
-
-<img-text-box>
-<button id="wa-btn" value="water"><img src="wuxingWater.svg" alt="The element of Water."></button>
-<p class="alt-text">Water</p>
-</img-text-box>
-
-</info-section-view>
-
-</info-section>
-
-<!-- grey band with a testimonial quote -->
-<quote-section>
-    <quote-view>
-        <blockquote>
-        I used to think astrology was stupid, or just for Millennials. Then I met a "stunted Sagittarius." Now I don't know what to think. I mean, it only costs a penny a day, and I inherited my grandmother's couch from the 1970s, there's like $36 plus in loose change in that smelly beast. I can help!!!
-        <h6>~ Ashley (One of many Ashley's you likely know.)</h6>
-        </blockquote>
-    </quote-view>
-</quote-section>
-
-<!-- white band with inner blue sign up box -->
-<sign-up-section>
-    <sign-up-view>
-        <call-to-action-box>
-            <call-to-action-text>
-                <h3>It's time to end the suffering! </h3> 
-                <p>Will you contribute just 1 cent a day to a zodiac sign in need? Make a difference!</p>
-            </call-to-action-text>
-            <button-box>
-            <button>Sign up!</button>
-            </button-box>
-        </call-to-action-box>
-    </sign-up-view>
-</sign-up-section>
-
-<!-- grey footer -->
-<footer>
-<p>Copyright © Mad Muffin Man Productions 2023</p>
-</footer>
-
-</body>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <script src="javascript.js" defer></script>
+    <title>Wu Xing Roshambo</title>
+    <body>
+        <header>
+        <header-container>
+            <header-title>    
+                <h1>Wu Xing <header-chinese>(五行)</header-chinese> Roshambo</h1>
+            </header-title>
+            <header-inner-container>
+                <header-left>
+                    <h2>Rules of Elemental Combat: </h2>
+                    <ol>
+                        <li>Choose an ancient element.</li> 
+                        <br>
+                        <li>Next, your opponent (the computer) will choose an element.</li> 
+                        <br>
+                        <li>When both selections are revealed, the stronger element choice will determine the winner of that round, and will receive one point. (Ties will be replayed until a winner is determined.)</li> 
+                        <br>
+                        <li>The match champion will emerge after winning five points. </li>
+                    </ol>
+                </header-left>
+                <img src="wuxingWheel.svg" alt="A wheel containing the five Taoist elements of wood, fire, earth, metal, and water.">
+            </header-inner-container>
+        </header-container>
+        </header>
+        <element-section>
+            <element-section-view>
+                <element-text-box>
+                    <button id="btn-wo" class="elem-btn" value="Wood"><img id="img-wo" src="wuxingWood.svg" alt="The element of Wood.">Wood</button>
+                </element-text-box>
+                <element-text-box>
+                    <button id="btn-fi" class="elem-btn" value="Fire"><img id="img-fi" src="wuxingFire.svg" alt="The element of Fire.">Fire</button>
+                </element-text-box>
+                <element-text-box>
+                    <button id="btn-ea" class="elem-btn" value="Earth"><img id="img-ea" src="wuxingEarth.svg" alt="The element of Earth.">Earth</button>
+                </element-text-box>
+                <element-text-box>
+                    <button id="btn-me" class="elem-btn" value="Metal"><img id="img-me" src="wuxingMetal.svg" alt="The element of Metal.">Metal</button>
+                </element-text-box>
+                <element-text-box>
+                    <button id="btn-wa" class="elem-btn" value="Water"><img id="img-wa" src="wuxingWater.svg" alt="The element of Water.">Water</button>
+                </element-text-box>
+            </element-section-view>
+        </element-section>
+        <choice-section>
+            <choice-view>
+                <choice-box>
+                    <h1 id="my-pick"></h1> 
+                </choice-box>
+                <choice-box>
+                    <h1 id="comp-pick"></h1> 
+                </choice-box>
+            </choice-view> 
+        </choice-section>
+        <game-tally-section>
+            <game-tally-view>
+                <game-wins-box>
+                    <p>Your<br> Points</p>
+                    <h3 id="cur-wins"></h3>
+                </game-wins-box>
+                <current-game-msg-box>
+                    <current-game-msg-inner-box>
+                        <h1 id="win-msg"></h1> 
+                    </current-game-msg-inner-box>
+                </current-game-msg-box>
+                <game-losses-box>
+                    <p>Opponent's<br> Points</p>
+                    <h3 id="cur-losses"></h3>
+                </game-losses-box>
+            </game-tally-view>
+        </game-tally-section>
+        <footer>
+            <p>Copyright © Mad Muffin Man Design Studio 2024</p>
+        </footer>
+    </body>
 </html>
