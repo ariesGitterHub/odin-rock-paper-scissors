@@ -11,10 +11,14 @@
 } */
 
 :root {
+    --black: #0e0e0f; 
+    --btn: rgb(80, 54, 81);
+    --btn-txt: #dfc322;
     --dkgrey: #26272d;
-    --white: #f5eeee;
+    --dkgrey-trans: #26272dac;
+
     --ltgrey: #a8a2a2;
-    --black: #0e0e0f;
+    --white: #f5eeee;
 
     --wood: #297062;
     --fire: #7e2424;
@@ -45,7 +49,8 @@ body {
     /* width: 100vw; */
     display: flex;
         flex-direction: column;
-    margin: auto;
+    margin: 0;
+    min-height: 100vh;
 }
 
 /* .emoji1, .emoji2 {
@@ -151,7 +156,7 @@ element-section-view img {
     height: 50px;
 } */
 
-button {
+.elem-btn {
     height: 145px;
     width: 145px;
     border: 10px double var(--white);
@@ -166,14 +171,13 @@ button {
     text-align: center;
     margin: 5px;
     /* padding: 5px; */
-
 }
 
-button img {
+.elem-btn  img {
     margin: 8px;
 }
 
-button:hover {
+.elem-btn:hover {
     height: 145px;
     width: 148px;
 }
@@ -228,11 +232,10 @@ button:hover {
     
 }
 
-
 /* ELEMENT CHOICE SECTION */
 
 choice-section {
-
+    margin: auto;
 }
 
 choice-view {
@@ -241,11 +244,11 @@ choice-view {
     flex-direction: column;
         align-items: center;
         justify-content: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 choice-box {
-    height: 50px;
+    height: 70px;
     width: var(--content-width);
     background-color: var(--dkgrey);
     border-radius: var(--default-border-radius);
@@ -255,7 +258,6 @@ choice-box {
         align-items: center;
         justify-content: space-around;
     font-family: var(--default-text) ;
-    /* font-family: var(--title-text); */
     margin: 5px;
     padding: 5px;
 }
@@ -267,7 +269,6 @@ choice-box {
 #comp-pick {
     color: var(--comp);
 }
-
 
 /* GAME TALLY SECTION */
 
@@ -285,7 +286,7 @@ game-tally-view {
 }
 
 game-wins-box, game-losses-box {
-    height: 210px;
+    height: 300px;
     width: 150px;
     background-color: var(--dkgrey);
     border-radius: var(--default-border-radius);
@@ -311,12 +312,12 @@ game-wins-box p, game-losses-box p {
 }
 
 game-wins-box h3, game-losses-box h3 {
-    font-size: 123px;
+    font-size: 150px;
     margin: auto;
 }
 
 current-game-msg-box {
-    height:210px;
+    height:300px;
     width: 400px;
     background-color: var(--dkgrey);
     border-radius: var(--default-border-radius);
@@ -332,17 +333,15 @@ current-game-msg-inner-box {
     display: flex;
         align-items: center;
         justify-content: center;
-
 }
 
 #win-msg {
     color: var(--win-lose);
     font-family: var(--title-text);
     font-weight: 100;
-    font-size: 36px;
+    font-size: 45px;
     padding: 20px;;
 }
-
 
 /* FOOTER */
 
@@ -358,7 +357,54 @@ footer {
 footer p {
     font-family: var(--title-text);
     font-size: 24px;
+}
+
+/* MODAL SECTION (THIS IS NEW FOR ME) */
+
+custom-modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--dkgrey-trans);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+modal-content {
+    height:430px;
+    width: 770px;
+    background-color: var(--black);
+    border: 10px dashed var(--btn-txt);
+    border-radius: var(--default-border-radius);
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    margin: auto;
     padding: 10px;
 }
 
+#modal-message {
+    color: var(--btn-txt);
+    font-family: var(--title-text);
+    font-size: 50px;
+    font-weight: 100;
+    text-align: center;  
+}
 
+#modal-close-btn {
+    height: 80px;
+    width: 88%;
+    background-color: var(--btn);
+    border: 10px solid var(--btn-txt);
+    border-radius: var(--default-border-radius);
+    color: var(--btn-txt);
+    cursor: pointer;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+    font-family: var(--title-text);
+    font-size: 50px;
+    padding: 50px;
+}

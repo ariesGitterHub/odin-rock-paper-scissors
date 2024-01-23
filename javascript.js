@@ -76,13 +76,13 @@ function getMyElem(e) {
     myElem = wa;
     rando = compRandNum();
     myPick.textContent = `You chose the element of ${wa}.`;
-    } 
+  }
 
   function getCompElem() {
     if (myElem) {
       if (rando === 1) {
         compElem = wo;
-          compPick.textContent = `Your opponent selected ${wo}.`;
+        compPick.textContent = `Your opponent selected ${wo}.`;
       } else if (rando === 2) {
         compElem = fi;
         compPick.textContent = `Your opponent selected ${fi}.`;
@@ -110,49 +110,49 @@ function getMyElem(e) {
       (myElem === fi && compElem === wo) ||
       (myElem === wo && compElem === fi)
     ) {
-      return (message = "Fire devours Wood");
+      return (message = `"Fire devours Wood."`);
     } else if (
       (myElem === me && compElem === wo) ||
       (myElem === wo && compElem === me)
     ) {
-      return (message = "Metal severs Wood");
+      return (message = `"Metal severs Wood."`);
     } else if (
       (myElem === ea && compElem === fi) ||
       (myElem === fi && compElem === ea)
     ) {
-      return (message = "Earth smothers Fire");
+      return (message = `"Earth smothers Fire."`);
     } else if (
       (myElem === wa && compElem === fi) ||
       (myElem === fi && compElem === wa)
     ) {
-      return (message = "Water extinguishes Fire");
+      return (message = `"Water extinguishes Fire."`);
     } else if (
       (myElem === me && compElem === ea) ||
       (myElem === ea && compElem === me)
     ) {
-      return (message = "Metal hides within Earth");
+      return (message = `"Metal hides within Earth."`);
     } else if (
       (myElem === wo && compElem === ea) ||
       (myElem === ea && compElem === wo)
     ) {
-      return (message = "Wood depletes Earth");
+      return (message = `"Wood depletes Earth."`);
     } else if (
       (myElem === wa && compElem === me) ||
       (myElem === me && compElem === wa)
     ) {
-      return (message = "Water rusts Metal");
+      return (message = `"Water rusts Metal."`);
     } else if (
       (myElem === fi && compElem === me) ||
       (myElem === me && compElem === fi)
     ) {
-      return (message = "Fire melts Metal");
+      return (message = `"Fire melts Metal."`);
     } else if (
       (myElem === wo && compElem === wa) ||
       (myElem === wa && compElem === wo)
     ) {
-      return (message = "Wood drinks Water");
+      return (message = `"Wood drinks Water."`);
     } else {
-      return (message = "Earth directs and contains Water");
+      return (message = `"Earth directs and contains Water."`);
     }
   }
 
@@ -171,7 +171,7 @@ function getMyElem(e) {
       (myElem === wo && compElem === wa) ||
       (myElem === ea && compElem === wa)
     ) {
-      winMsg.textContent = `${outcomeMessage()}, you win a point!`;
+      winMsg.textContent = `${outcomeMessage()} You win a point!`;
       gameCount++;
       curWins += 1;
       curWinsText.textContent = `${curWins}`;
@@ -180,9 +180,9 @@ function getMyElem(e) {
       Replay until there is a winner.`;
       gameCount++;
     } else {
-      winMsg.textContent = `${outcomeMessage()}. Opponent gains a point.`;
-      gameCount ++;
-      curLosses+=1;
+      winMsg.textContent = `${outcomeMessage()} Opponent gains a point.`;
+      gameCount++;
+      curLosses += 1;
       curLossesText.textContent = `${curLosses}`;
     }
   }
@@ -191,22 +191,49 @@ function getMyElem(e) {
 
   function matchWinnerOrLoser() {
     if (curWins === 5) {
-      winMsg.textContent = `You win with 5 points! (${outcomeMessage()}.)`
+      winMsg.textContent = `You win with 5 points! (${outcomeMessage()})`;
     } else if (curLosses === 5) {
-      winMsg.textContent = `Opponent has 5 points, you lose. (${outcomeMessage()}.)`;
-    } 
+      winMsg.textContent = `Opponent has 5 points, you lose. (${outcomeMessage()})`;
+    }
   }
 
   matchWinnerOrLoser();
 
+  // OLD CODE OF USING AN ALERT, KEEP FOR REFERENCE
+
+  // function resetGame() {
+  //   if (curWins === 5 || curLosses === 5) {
+  //     setTimeout(function () {
+  //       alert("Click OK to begin a new Wu Xing Roshambo match.");
+  //       location.reload();
+  //       return false;
+  //     }, 100);
+  //     }
+  //   }
+  // resetGame()
+
+  //NEW CODE OF USING A CUSTOM MODAL
+
+  function openModal() {
+    const modal = document.querySelector("custom-modal");
+    modal.style.display = "block";
+
+    const modalCloseBtn = document.querySelector("#modal-close-btn");
+    modalCloseBtn.addEventListener("click", closeModal);
+  }
+
   function resetGame() {
     if (curWins === 5 || curLosses === 5) {
-      setTimeout(function () {
-        alert("Clock OK to begin a new Wu Xing Roshambo match.");
-        location.reload();
-        return false;
-      }, 100);
-      }
+      openModal();
     }
-  resetGame()
+  }
+
+  function closeModal() {
+    const modal = document.querySelector("custom-modal");
+    modal.style.display = "none";
+    location.reload();
+    return false;
+  }
+
+  resetGame();
 }
