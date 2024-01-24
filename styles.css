@@ -30,11 +30,12 @@
     --comp: #edd7da;
     --win-lose: #f8f8d2;
 
-    --btn-border: 13px dashed;
+    --btn-border: 13px dashed; 
     --content-width: 750px;
     --default-border-radius: 50px;
-    --default-text: "Salsa", cursive, Georgia;
-    --title-text: "Luckiest Guy", cursive, "Baskerville";
+
+    --default-text: "Salsa", cursive, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    --title-text: "Luckiest Guy", cursive, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --chinese-chars: "Noto Sans TC", sans-serif;
 }
 
@@ -94,7 +95,6 @@ header-inner-container {
 header-left {
     display: block;
     margin-left: 5px;
-    /* margin: auto; */
 }
 
 header-left ol {
@@ -106,7 +106,8 @@ header-left ol {
 header-container img {
     max-width: 300px;
     
-    /* animation */
+/* animation */
+
     animation: wheel-spin infinite 45s linear;
     transition: filter 3000ms;
 }
@@ -147,14 +148,7 @@ element-section-view {
 element-section-view img {
     height: 70px;
     width: 70px;
-    /* border-radius: 30px; */
-    /* padding: 10px; */
 }
-
-/* element-section-view img:hover {
-    width: 50px;
-    height: 50px;
-} */
 
 .elem-btn {
     height: 145px;
@@ -170,18 +164,18 @@ element-section-view img {
     font-family: var(--title-text);
     text-align: center;
     margin: 5px;
-    /* padding: 5px; */
+    transition: 100ms;
 }
 
 .elem-btn  img {
     margin: 8px;
 }
 
-.elem-btn:hover {
+.elem-btn:active {
     height: 145px;
     width: 148px;
+    transform: scale(1.2);
 }
-
 
 #btn-wo {
     background-color: var(--wood);
@@ -339,7 +333,7 @@ current-game-msg-inner-box {
     color: var(--win-lose);
     font-family: var(--title-text);
     font-weight: 100;
-    font-size: 45px;
+    font-size: 40px;
     padding: 20px;;
 }
 
@@ -369,13 +363,14 @@ custom-modal {
     position: fixed;
     top: 0;
     left: 0;
+    margin-top: 10px;
 }
 
 modal-content {
-    height:430px;
+    height:420px;
     width: 770px;
     background-color: var(--black);
-    border: 10px dashed var(--btn-txt);
+    border: 13px dashed var(--btn-txt);
     border-radius: var(--default-border-radius);
     display: flex;
         flex-direction: column;
@@ -407,4 +402,10 @@ modal-content {
     font-family: var(--title-text);
     font-size: 50px;
     padding: 50px;
+}
+
+/* FUTURE RESPONSIVE MOBILE SETUP */
+
+@media screen and (max-width: 480px) {
+
 }
